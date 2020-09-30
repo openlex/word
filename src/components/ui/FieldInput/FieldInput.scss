@@ -1,0 +1,27 @@
+.block {
+	display: block;
+	min-width: 200px;
+	max-width: 90%;
+	padding: 2px;
+	margin-bottom: 5px;
+}
+
+.fieldWrapper {
+	display: block;
+}
+
+.label {
+	display: block;
+	margin-bottom: 3px;
+}
+
+.textarea {
+	width: 100%;
+	min-height: 90px;
+	padding: 10px;
+}
+
+.input {
+	display: inline-block;
+	min-width: 150px;
+}

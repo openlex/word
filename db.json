@@ -1,0 +1,63 @@
+{
+  "words": [
+    {
+      "item": "Warmly",
+      "weight": 100,
+      "pos": "adverb"
+    },
+    {
+      "item": "Hearty",
+      "weight": 98,
+      "pos": "adjective"
+    },
+    {
+      "item": "Hospitable",
+      "weight": 94,
+      "pos": "adjective"
+    },
+    {
+      "item": "Cordial",
+      "weight": 93,
+      "pos": "adjective"
+    },
+    {
+      "item": "Heartily",
+      "weight": 85,
+      "pos": "adverb"
+    },
+    {
+      "item": "Greet",
+      "weight": 84,
+      "pos": "verb"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Post 1"
+    },
+    {
+      "id": 2,
+      "title": "Post 2"
+    },
+    {
+      "id": 3,
+      "title": "Post 3"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
