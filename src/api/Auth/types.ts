@@ -7,3 +7,7 @@ export interface IPeopleResp {
 		[key: string]: string;
 	}[];
 }
+
+export interface IUserResp {
+	name: string;
+}

@@ -1,8 +1,16 @@
-import { configureStore } from "@reduxjs/toolkit";
-import thunkMiddleware from "redux-thunk";
-import { userReducer } from "./user";
+import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
+import createSagaMiddleware from "redux-saga";
+import { combineReducers } from "redux";
+import { reducer as userReducer, userSaga } from "@rdx";
+import { fork } from "redux-saga/effects";
 
-const middleware = [thunkMiddleware];
+function* rootSaga() {
+	yield fork(userSaga);
+}
+
+const sagaMiddleware = createSagaMiddleware();
+
+const middleware = [...getDefaultMiddleware(), sagaMiddleware];
 
 if (process.env.NODE_ENV === `development`) {
 	// eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -11,9 +19,15 @@ if (process.env.NODE_ENV === `development`) {
 	middleware.push(logger);
 }
 
+export const rootReducer = combineReducers({
+	userReducer,
+});
+
 export const store = configureStore({
-	reducer: {
-		userReducer,
-	},
+	reducer: rootReducer,
 	middleware,
 });
+
+sagaMiddleware.run(rootSaga);
+
+export type RootReducerType = ReturnType<typeof rootReducer>;

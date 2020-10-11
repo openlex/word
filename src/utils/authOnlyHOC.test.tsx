@@ -1,8 +1,9 @@
 import React from "react";
-import { mount } from "enzyme";
-import { authOnlyHOC, sleep } from "@utils";
-import { act } from "react-dom/test-utils";
-import { AuthApi } from "@api/Auth/Auth";
+import { mount, ReactWrapper } from "enzyme";
+import { authOnlyHOC } from "@utils";
+import { Provider } from "react-redux";
+import { rootReducer, actions, EUserStatus } from "@rdx";
+import { configureStore } from "@reduxjs/toolkit";
 
 jest.mock("react-router-dom", () => ({
 	Redirect: function Redirect(props: any) {
@@ -11,36 +12,48 @@ jest.mock("react-router-dom", () => ({
 }));
 
 describe("authorizedOnlyHoc", () => {
-	interface IComponentProps {
-		name: string;
-	}
-
-	const Component: React.FC<IComponentProps> = ({ name }) => <h1>{name}</h1>;
-	const WrappedComponent = authOnlyHOC(Component);
-
-	it("renders placeholder during request and component on success", async () => {
-		AuthApi.isLoggedIn = async () => true;
-
-		const wrapper = mount(<WrappedComponent name="Bob" />);
-		expect(wrapper.find('[data-test-id="loading-screen"]').length).toBe(1);
-		await act(async () => {
-			await sleep(1000);
-			wrapper.update();
-			expect(wrapper.html()).toMatchInlineSnapshot(`"<h1>Bob</h1>"`);
-		});
+	const Component: React.FC = () => <h1>done</h1>;
+	let wrapper: ReactWrapper;
+	const store = configureStore({
+		reducer: rootReducer,
 	});
 
-	it("renders placeholder during request and component on Error", async () => {
-		AuthApi.isLoggedIn = async () => false;
-		const wrapper = mount(<WrappedComponent name="Bob" />);
+	beforeEach(() => {
+		const AuthComp = authOnlyHOC(() => <Component />);
+		wrapper = mount(
+			<Provider store={store}>
+				<AuthComp />
+			</Provider>
+		);
+	});
 
+	it("Render component if user is added in store", async () => {
+		const payload = { name: "Alex" };
+		store.dispatch(actions.add(payload));
+		wrapper.update();
+		expect(store.getState().userReducer.status).toBe(EUserStatus.FULFILL);
+		expect(wrapper.html()).toMatchInlineSnapshot(`"<h1>done</h1>"`);
+	});
+
+	it("Render LoadingScreen preloader if store status is pending", async () => {
+		store.dispatch(actions.pending());
+		wrapper.update();
+		expect(store.getState().userReducer.status).toBe(EUserStatus.PENDING);
 		expect(wrapper.find('[data-test-id="loading-screen"]').length).toBe(1);
-		await act(async () => {
-			await sleep(1000);
-			wrapper.update();
-			expect(wrapper.html()).toMatchInlineSnapshot(
-				`"<div>Redirect: {\\"to\\":\\"/signIn\\"}</div>"`
-			);
-		});
+	});
+
+	it("Redirect on redirectPath if no user", async () => {
+		store.dispatch(actions.remove());
+		wrapper.update();
+		expect(wrapper.html()).toMatchInlineSnapshot(
+			`"<div>Redirect: {\\"to\\":\\"/signIn\\"}</div>"`
+		);
+	});
+	it("Redirect on redirectPath if error in auth", async () => {
+		store.dispatch(actions.error());
+		wrapper.update();
+		expect(wrapper.html()).toMatchInlineSnapshot(
+			`"<div>Redirect: {\\"to\\":\\"/signIn\\"}</div>"`
+		);
 	});
 });

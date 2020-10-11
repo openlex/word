@@ -1,6 +1,4 @@
 import { sleep } from "@/utils";
-import axios from "axios";
-import { IPeopleResp } from "@api/Auth/types";
 
 export class AuthApi {
 	static signIn = async (name: string) => {
@@ -18,12 +16,10 @@ export class AuthApi {
 		return !!localStorage.getItem("name");
 	};
 
-	static fetchUser = async (): Promise<{ name: string | null }> => {
-		const resp: IPeopleResp = await axios.get(
-			"https://swapi.dev/api/people"
-		);
-		const userName = resp?.results[0]?.name;
+	static fetchUser = async (): Promise<any> => {
+		sleep(1000);
+		const userName = localStorage.getItem("name");
 
-		return { name: userName };
+		return userName ? { name: userName } : null;
 	};
 }
