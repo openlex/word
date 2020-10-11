@@ -20,7 +20,6 @@ describe("fetchData", () => {
 		};
 
 		axios.get.mockImplementationOnce(() => Promise.resolve(data));
-
 		await expect(AuthApi.fetchUser()).resolves.toEqual({
 			name: data.results[0].name,
 		});
