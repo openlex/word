@@ -18,17 +18,6 @@ export const App: React.FC = () => {
 	const location = useLocation();
 	const [user, setUser] = useState("");
 	const [respStatus, setRespStatus] = useState<ERespStatus | null>(null);
-	// const onLogIn = useCallback(async (name: string) => {
-	// 	console.log('!');
-	// 	// setRespStatus(ERespStatus.PENDING);
-	// 	// try {
-	// 	// 	await AuthApi.signIn(name);
-	// 	// 	setRespStatus(ERespStatus.FULFILL);
-	// 	// 	setUser(name);
-	// 	// } catch (err) {
-	// 	// 	setRespStatus(ERespStatus.ERROR);
-	// 	// }
-	// }, []);
 	const onLogOut = useCallback(async () => {
 		setRespStatus(ERespStatus.PENDING);
 		try {
