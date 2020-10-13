@@ -9,20 +9,34 @@ export const authOnlyHOC = <Props extends object>(
 	Component: React.ComponentType,
 	redirectPath: string = ROUTES.auth
 ) => {
-	const Authenticate: React.FC<{ status: EUserStatus }> = ({ status }) => {
+	const Authenticate: React.FC<{ status: EUserStatus; name: string }> = ({
+		status,
+		name,
+	}) => {
 		switch (status) {
 			default:
 			case EUserStatus.IDLE:
-				return <Redirect to={redirectPath} />;
 			case EUserStatus.PENDING:
 				return <LoadingScreen data-test-id="loading-screen" />;
+			case EUserStatus.ERROR:
+				return <Redirect to={redirectPath} />;
 			case EUserStatus.FULFILL:
-				return <Component />;
+				if (name) {
+					return <Component />;
+				} else {
+					return <Redirect to={redirectPath} />;
+				}
 		}
 	};
 
-	const mapStateToProps = ({ userReducer: { status } }: RootReducerType) => ({
+	const mapStateToProps = ({
+		userReducer: {
+			status,
+			data: { name },
+		},
+	}: RootReducerType) => ({
 		status,
+		name,
 	});
 
 	return connect(mapStateToProps)(Authenticate);

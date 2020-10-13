@@ -1,12 +1,13 @@
 import { expectSaga } from "redux-saga-test-plan";
 import * as matchers from "redux-saga-test-plan/matchers";
-import { checkUserSession, EUserStatus } from "@rdx";
 import {
-	actions,
+	EUserStatus,
+	actions as userActions,
 	reducer as userReducer,
+	checkUserSession,
 	removeUserSession,
 	saveUserSession,
-} from "@rdx/user";
+} from "@rdx";
 import { AuthApi } from "@api";
 
 describe("Login saga", () => {
@@ -17,8 +18,8 @@ describe("Login saga", () => {
 		return expectSaga(checkUserSession)
 			.withReducer(userReducer)
 			.provide([[matchers.call.fn(AuthApi.fetchUser), user]])
-			.put(actions.pending())
-			.put(actions.add(user))
+			.put(userActions.pending())
+			.put(userActions.add(user))
 			.hasFinalState({
 				data: {
 					name: userName,
@@ -32,19 +33,19 @@ describe("Login saga", () => {
 		return expectSaga(checkUserSession)
 			.withReducer(userReducer)
 			.provide([matchers.call.fn(AuthApi.logOut)])
-			.put(actions.pending())
-			.put(actions.remove())
+			.put(userActions.pending())
+			.put(userActions.remove())
 			.hasFinalState({
 				data: {
 					name: "",
 				},
-				status: EUserStatus.IDLE,
+				status: EUserStatus.FULFILL,
 			})
 			.run();
 	});
 
 	it("signIn", () => {
-		return expectSaga(saveUserSession, actions.add(user))
+		return expectSaga(saveUserSession, userActions.add(user))
 			.call(AuthApi.signIn, userName)
 			.run();
 	});

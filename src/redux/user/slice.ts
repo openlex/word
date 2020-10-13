@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { IUser, IUserData } from "@rdx/user/types";
-import { EUserStatus } from "./EUserStatus";
+import { IUser, IUserData, EUserStatus } from "@rdx/user";
 
 export const initialState: IUser = {
 	data: {
@@ -21,9 +20,10 @@ export const userSlice = createSlice({
 				status: EUserStatus.FULFILL,
 			};
 		},
-		remove: () => {
-			return initialState;
-		},
+		remove: () => ({
+			...initialState,
+			status: EUserStatus.FULFILL,
+		}),
 		pending: (state) => {
 			state.status = EUserStatus.PENDING;
 		},

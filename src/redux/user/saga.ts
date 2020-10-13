@@ -1,7 +1,7 @@
 import { call, fork, put, takeEvery } from "redux-saga/effects";
-import { AuthApi, IUserResp } from "@api";
+import { IUserResp, AuthApi } from "@api/Auth";
 import { AnyAction } from "redux";
-import { actions as userActions } from "./slice";
+import { actions as userActions } from "@rdx/user";
 
 export function* saveUserSession(action: AnyAction) {
 	yield call(AuthApi.signIn, action.payload.name);

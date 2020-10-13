@@ -1,8 +1,10 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
 import { combineReducers } from "redux";
-import { reducer as userReducer, userSaga } from "@rdx";
+import { reducer as userReducer } from "@rdx/user";
 import { fork } from "redux-saga/effects";
+import { userSlice } from "./user/slice";
+import { userSaga } from "./user/saga";
 
 function* rootSaga() {
 	yield fork(userSaga);
@@ -20,7 +22,7 @@ if (process.env.NODE_ENV === `development`) {
 }
 
 export const rootReducer = combineReducers({
-	userReducer,
+	userReducer: userSlice.reducer,
 });
 
 export const store = configureStore({

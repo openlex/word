@@ -1,7 +1,7 @@
 import {
-	actions,
 	EUserStatus,
 	initialState,
+	actions as userActions,
 	reducer as userReducer,
 } from "@rdx/user";
 
@@ -22,30 +22,31 @@ describe("Login slice", () => {
 	});
 
 	it("add user", () => {
-		expect(userReducer(undefined, actions.add(user))).toEqual(
+		expect(userReducer(undefined, userActions.add(user))).toEqual(
 			stateFullFill
 		);
 	});
 
 	it("remove user", () => {
-		expect(userReducer(stateFullFill, actions.remove())).toEqual(
-			initialState
-		);
+		expect(userReducer(stateFullFill, userActions.remove())).toEqual({
+			...initialState,
+			status: EUserStatus.FULFILL,
+		});
 	});
 
 	it("pending user", () => {
-		expect(userReducer(stateFullFill, actions.pending())).toEqual({
+		expect(userReducer(stateFullFill, userActions.pending())).toEqual({
 			...stateFullFill,
 			status: EUserStatus.PENDING,
 		});
 	});
 
 	it("error", () => {
-		expect(userReducer(stateFullFill, actions.error())).toEqual({
+		expect(userReducer(stateFullFill, userActions.error())).toEqual({
 			...stateFullFill,
 			status: EUserStatus.ERROR,
 		});
-		expect(userReducer(initialState, actions.error())).toEqual({
+		expect(userReducer(initialState, userActions.error())).toEqual({
 			...initialState,
 			status: EUserStatus.ERROR,
 		});
