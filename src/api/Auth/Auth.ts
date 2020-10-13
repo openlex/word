@@ -1,4 +1,5 @@
 import { sleep } from "@/utils";
+import { IUserData } from "@rdx";
 
 export class AuthApi {
 	static signIn = async (name: string) => {
@@ -14,5 +15,12 @@ export class AuthApi {
 	static isLoggedIn = async (): Promise<boolean> => {
 		await sleep(1000);
 		return !!localStorage.getItem("name");
+	};
+
+	static fetchUser = async (): Promise<IUserData | null> => {
+		sleep(1000);
+		const userName = localStorage.getItem("name");
+
+		return userName ? { name: userName } : null;
 	};
 }

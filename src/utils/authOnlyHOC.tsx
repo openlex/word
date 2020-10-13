@@ -1,39 +1,43 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { ROUTES } from "@/ROUTES";
-import { AuthApi } from "@api";
 import { Redirect } from "react-router-dom";
 import { LoadingScreen } from "@components";
-
-enum EAuthStatus {
-	CHECKING = 0,
-	AUTH = 1,
-	EMPTY = 2,
-}
+import { EUserStatus, RootReducerType } from "@rdx";
+import { connect } from "react-redux";
 
 export const authOnlyHOC = <Props extends object>(
-	Component: React.ComponentType<Props>,
+	Component: React.ComponentType,
 	redirectPath: string = ROUTES.auth
-) => (props: Props) => {
-	const [isAuthorized, setIsAuthorized] = useState<EAuthStatus>(
-		EAuthStatus.CHECKING
-	);
+) => {
+	const Authenticate: React.FC<{ status: EUserStatus; name: string }> = ({
+		status,
+		name,
+	}) => {
+		switch (status) {
+			default:
+			case EUserStatus.IDLE:
+			case EUserStatus.PENDING:
+				return <LoadingScreen data-test-id="loading-screen" />;
+			case EUserStatus.ERROR:
+				return <Redirect to={redirectPath} />;
+			case EUserStatus.FULFILL:
+				if (name) {
+					return <Component />;
+				} else {
+					return <Redirect to={redirectPath} />;
+				}
+		}
+	};
 
-	useEffect(() => {
-		(async () => {
-			const isAuthorized = await AuthApi.isLoggedIn();
-			setIsAuthorized(
-				isAuthorized ? EAuthStatus.AUTH : EAuthStatus.EMPTY
-			);
-		})();
-	}, []);
+	const mapStateToProps = ({
+		userReducer: {
+			status,
+			data: { name },
+		},
+	}: RootReducerType) => ({
+		status,
+		name,
+	});
 
-	if (isAuthorized === EAuthStatus.CHECKING) {
-		return <LoadingScreen data-test-id="loading-screen" />;
-	}
-
-	return isAuthorized === EAuthStatus.AUTH ? (
-		<Component {...props} />
-	) : (
-		<Redirect to={redirectPath} />
-	);
+	return connect(mapStateToProps)(Authenticate);
 };

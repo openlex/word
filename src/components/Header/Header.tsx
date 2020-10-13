@@ -1,17 +1,14 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { MainTitle, User } from "@components";
-import { useHistory } from "react-router-dom";
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import styled from "@emotion/styled";
 import { colors } from "@styles";
-import { ROUTES } from "@/ROUTES";
 
 jsx;
 
-interface IHeader {
-	user: string;
-
+export interface IHeader {
+	username: string;
 	onLogOut(): void;
 }
 
@@ -23,18 +20,12 @@ const Wrapper = styled.div`
 	justify-content: space-between;
 `;
 
-export const Header: React.FC<IHeader> = ({ user, onLogOut }) => {
-	const history = useHistory();
-	const onLogOutClick = useCallback(async () => {
-		onLogOut && (await onLogOut());
-		history.push(ROUTES.auth);
-	}, [history, onLogOut]);
-
+export const Header: React.FC<IHeader> = ({ username, onLogOut }) => {
 	return (
 		<Wrapper>
 			<MainTitle title="Вордариум2" />
-			{user && (
-				<User data-test-id="user" user={user} onClick={onLogOutClick} />
+			{username && (
+				<User data-test-id="user" user={username} onClick={onLogOut} />
 			)}
 		</Wrapper>
 	);
