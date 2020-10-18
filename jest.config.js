@@ -17,7 +17,7 @@ module.exports = {
 		"^@utils(.*)$": "<rootDir>/src/utils$1",
 		"^@styles(.*)$": "<rootDir>/src/styles$1",
 		"^@api(.*)$": "<rootDir>/src/api$1",
-		"^@rdx(.*)$": "<rootDir>/src/redux$1",
+		"^@modules(.*)$": "<rootDir>/src/modules$1",
 		"^.+\\.(css|scss)$": "identity-obj-proxy",
 	},
 	transformIgnorePatterns: ["/node_modules/"],

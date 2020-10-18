@@ -9,6 +9,6 @@ module.exports = {
 	"@styles": path.resolve(__dirname, "../src/styles/"),
 	"@utils": path.resolve(__dirname, "../src/utils/"),
 	"@api": path.resolve(__dirname, "../src/api/"),
-	"@rdx": path.resolve(__dirname, "../src/redux/"),
+	"@modules": path.resolve(__dirname, "../src/modules/"),
 	"@": path.resolve(__dirname, "../src"),
 };
