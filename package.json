@@ -112,6 +112,9 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
+    "redux-dynamic-modules": "^5.2.3",
+    "redux-dynamic-modules-saga": "^5.2.3",
+    "redux-dynamic-modules-thunk": "^5.2.3",
     "redux-saga": "^1.1.3"
   }
 }

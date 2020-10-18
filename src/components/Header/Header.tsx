@@ -1,16 +1,12 @@
 import React from "react";
-import { MainTitle, User } from "@components";
+import { MainTitle } from "@components";
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import styled from "@emotion/styled";
 import { colors } from "@styles";
+import { UserPanel } from "@modules/User";
 
 jsx;
-
-export interface IHeader {
-	username: string;
-	onLogOut(): void;
-}
 
 const Wrapper = styled.div`
 	background: ${colors.blue};
@@ -20,13 +16,11 @@ const Wrapper = styled.div`
 	justify-content: space-between;
 `;
 
-export const Header: React.FC<IHeader> = ({ username, onLogOut }) => {
+export const Header: React.FC = () => {
 	return (
 		<Wrapper>
 			<MainTitle title="Вордариум2" />
-			{username && (
-				<User data-test-id="user" user={username} onClick={onLogOut} />
-			)}
+			<UserPanel />
 		</Wrapper>
 	);
 };

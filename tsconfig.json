@@ -54,11 +54,11 @@
       "@api": [
         "./src/api/index"
       ],
-      "@rdx/*": [
-        "./src/redux/*"
+      "@modules/*": [
+        "./src/modules/*"
       ],
-      "@rdx": [
-        "./src/redux/index"
+      "@modules": [
+        "./src/modules/index"
       ],
       "@/*": [
         "src/*"

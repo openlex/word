@@ -1,12 +1,13 @@
 import * as React from "react";
-import { WordListContainer } from "@containers";
+import { WordList } from "@modules/Words";
 import { PlayerAvatar } from "@components";
 import { colors } from "@styles";
-import { authOnlyHOC } from "@utils";
+import { DynamicModuleLoader } from "redux-dynamic-modules";
+import { getUserModule, authOnlyHOC } from "@modules/User";
 
 export const MakeWordPage = authOnlyHOC(() => {
 	return (
-		<>
+		<DynamicModuleLoader modules={[getUserModule()]}>
 			<PlayerAvatar
 				size={100}
 				pic={
@@ -14,7 +15,7 @@ export const MakeWordPage = authOnlyHOC(() => {
 				}
 				color={colors.red}
 			/>
-			<WordListContainer />
-		</>
+			<WordList />
+		</DynamicModuleLoader>
 	);
 });
