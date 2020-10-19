@@ -11,7 +11,6 @@ function* rootSaga() {
 }
 
 const sagaMiddleware = createSagaMiddleware();
-
 const middleware = [...getDefaultMiddleware(), sagaMiddleware];
 
 if (process.env.NODE_ENV === `development`) {
