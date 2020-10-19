@@ -6,6 +6,7 @@ import { getUserModule, userSlice } from "@modules/User";
 import { getSagaExtension } from "redux-dynamic-modules-saga";
 
 const sagaMiddleware = createSagaMiddleware();
+
 const middleware = [...getDefaultMiddleware(), sagaMiddleware];
 
 if (process.env.NODE_ENV === `development`) {
