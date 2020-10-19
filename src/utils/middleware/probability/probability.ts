@@ -5,6 +5,7 @@ export const probabilityMiddleware = () => (next: Dispatch) => (action: {
 	meta: { probability: number };
 }) => {
 	const { probability } = action?.meta || 0;
+
 	if (probability >= Math.random()) {
 		return next(action);
 	}
