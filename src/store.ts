@@ -27,5 +27,4 @@ export const store = createStore<WordariumState>(
 	getUserModule()
 );
 
-
 export type RootReducerType = ReturnType<typeof rootReducer>;

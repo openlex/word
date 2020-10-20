@@ -1,15 +1,16 @@
 import React from "react";
-import { WordList } from "@components";
+import { WordListView } from "./";
 import { object, withKnobs } from "@storybook/addon-knobs";
 import { IWord } from "@types";
+import { action } from '@storybook/addon-actions';
 
 export default {
 	title: "Спиок слов",
-	component: WordList,
+	component: WordListView,
 	decorators: [withKnobs()],
 };
 
-export const WordListView = () => {
+export const WordList = () => {
 	const defaultWordList: IWord[] = [
 		{
 			id: "a",
@@ -22,5 +23,5 @@ export const WordListView = () => {
 		},
 	];
 
-	return <WordList wordList={object("Список слов", defaultWordList)} />;
+	return <WordListView wordList={object("Список слов", defaultWordList)} onClick={action('onClick')}/>;
 };
