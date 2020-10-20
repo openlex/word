@@ -2,7 +2,7 @@ import React from "react";
 import { WordListView } from "./";
 import { object, withKnobs } from "@storybook/addon-knobs";
 import { IWord } from "@types";
-import { action } from '@storybook/addon-actions';
+import { action } from "@storybook/addon-actions";
 
 export default {
 	title: "Спиок слов",
@@ -23,5 +23,10 @@ export const WordList = () => {
 		},
 	];
 
-	return <WordListView wordList={object("Список слов", defaultWordList)} onClick={action('onClick')}/>;
+	return (
+		<WordListView
+			wordList={object("Список слов", defaultWordList)}
+			onClick={action("onClick")}
+		/>
+	);
 };

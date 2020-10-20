@@ -1,14 +1,14 @@
 import React from "react";
-import { mount, ReactWrapper, render } from "enzyme";
+import { mount, ReactWrapper, shallow, ShallowWrapper } from "enzyme";
 import { User } from "./User";
 
-describe("WordListItem markup", () => {
-	let user: ReactWrapper = {} as ReactWrapper;
+describe("User", () => {
+	let user: ShallowWrapper = {} as ShallowWrapper;
 	const textValue = "text";
 	const onClickMock = jest.fn();
 
 	beforeEach(() => {
-		user = mount(<User user={textValue} onClick={onClickMock} />);
+		user = shallow(<User user={textValue} onClick={onClickMock} />);
 	});
 
 	it("Click on btn fire click-action", () => {
@@ -16,9 +16,7 @@ describe("WordListItem markup", () => {
 		expect(onClickMock).toHaveBeenCalled();
 	});
 
-	it("match snapshoot", () => {
-		expect(
-			render(<User user={textValue} onClick={onClickMock} />)
-		).toMatchSnapshot();
+	it("Has user name as in props", () => {
+		expect(user.find('[data-test-id="username"]').text()).toBe(textValue);
 	});
 });

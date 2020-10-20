@@ -22,7 +22,7 @@ const UserName = styled.div`
 export const User: React.FC<IUser> = ({ user, onClick }: IUser) => {
 	return (
 		<Wrapper>
-			<UserName>{user}</UserName>
+			<UserName data-test-id="username">{user}</UserName>
 			<button data-test-id="button" onClick={onClick}>
 				Выйти
 			</button>
