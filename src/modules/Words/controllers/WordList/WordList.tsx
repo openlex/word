@@ -1,6 +1,6 @@
 import * as React from "react";
 import { WordListView } from "./WordListView/WordListView";
-import { IWord, IWordListResponseItem } from "@types";
+import { IWord, IWordListResponseItem } from "@/types";
 
 export interface IWordListContainerProps {
 	users?: string;

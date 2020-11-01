@@ -1,10 +1,10 @@
 import React from "react";
-import { MainTitle } from "@components";
+import { MainTitle } from "@/components";
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import styled from "@emotion/styled";
-import { colors } from "@styles";
-import { UserPanel } from "@modules/User";
+import { colors } from "@/styles";
+import { UserPanel } from "@/modules/User";
 
 jsx;
 

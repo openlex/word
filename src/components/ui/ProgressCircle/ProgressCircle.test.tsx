@@ -1,5 +1,5 @@
 import React from "react";
-import { ProgressCircle } from "@components";
+import { ProgressCircle } from "@/components";
 import { shallow, ShallowWrapper } from "enzyme";
 
 describe("Progress circle", () => {

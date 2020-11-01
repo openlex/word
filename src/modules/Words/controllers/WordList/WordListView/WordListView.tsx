@@ -1,6 +1,6 @@
 import React from "react";
 import { WordListItem } from "./";
-import { IWord } from "@types";
+import { IWord } from "@/types";
 
 export interface IWordListProps {
 	wordList: IWord[];

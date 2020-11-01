@@ -1,4 +1,4 @@
-import { myThunk } from "@utils";
+import { myThunk } from "@/utils";
 
 describe("test myThunk middleware", () => {
 	const dispatch = jest.fn();

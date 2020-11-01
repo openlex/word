@@ -2,7 +2,7 @@ import { getDefaultMiddleware } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
 import { combineReducers } from "redux";
 import { createStore } from "redux-dynamic-modules";
-import { getUserModule, userSlice } from "@modules/User";
+import { getUserModule, userSlice } from "@/modules/User";
 import { getSagaExtension } from "redux-dynamic-modules-saga";
 
 const sagaMiddleware = createSagaMiddleware();

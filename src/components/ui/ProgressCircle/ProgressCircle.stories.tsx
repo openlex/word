@@ -1,6 +1,6 @@
 import * as React from "react";
 import { color, number, text, withKnobs } from "@storybook/addon-knobs";
-import { ProgressCircle } from "@components";
+import { ProgressCircle } from "@/components";
 
 export default {
 	title: "ui/Круг с прогрессбаром",

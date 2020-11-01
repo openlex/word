@@ -1,7 +1,7 @@
 import React from "react";
-import { ProgressCircle } from "@components";
+import { ProgressCircle } from "@/components";
 import styled from "@emotion/styled";
-import { mixinFlexCenter } from "@styles";
+import { mixinFlexCenter } from "@/styles";
 
 const Wrapper = styled.div`
 	${mixinFlexCenter}

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { text, withKnobs } from "@storybook/addon-knobs";
-import { FieldInput } from "@components";
+import { FieldInput } from "@/components";
 import { Formik } from "formik";
 
 import { action } from "@storybook/addon-actions";

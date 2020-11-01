@@ -1,6 +1,6 @@
 // import React from "react";
 import React from "react";
-import { FieldInput, IFieldInputData, IFieldInputProps } from "@components";
+import { FieldInput, IFieldInputData, IFieldInputProps } from "@/components";
 import { shallow, ShallowWrapper } from "enzyme";
 
 describe("FieldInput item", () => {

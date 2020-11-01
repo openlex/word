@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import styled from "@emotion/styled";
-import { EProgress, ProgressCircle } from "@components";
-import { colors, mixinAbsoluteCenter } from "@styles";
+import { EProgress, ProgressCircle } from "@/components";
+import { colors, mixinAbsoluteCenter } from "@/styles";
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 

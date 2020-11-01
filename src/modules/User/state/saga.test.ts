@@ -1,6 +1,6 @@
 import { expectSaga, testSaga } from "redux-saga-test-plan";
 import * as matchers from "redux-saga-test-plan/matchers";
-import { AuthApi } from "@api";
+import { AuthApi } from "@/api";
 import {
 	EUserStatus,
 	checkUserSession,

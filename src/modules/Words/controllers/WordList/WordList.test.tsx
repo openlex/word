@@ -2,7 +2,7 @@ import React from "react";
 import { shallow, ShallowWrapper } from "enzyme";
 import { WordList } from "./";
 import { wordListMock, wordListResponseMock } from "@mocks/wordList.mock";
-import { IWord } from "@types";
+import { IWord } from "@/types";
 
 describe("WordListItemContainer", () => {
 	let wordListItem: ShallowWrapper<{}, {}, WordList>;

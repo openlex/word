@@ -1,6 +1,6 @@
 import * as React from "react";
 import { color, number, text, withKnobs } from "@storybook/addon-knobs";
-import { PlayerAvatar } from "@components";
+import { PlayerAvatar } from "@/components";
 
 export default {
 	title: "Аватар с прогрессбаром",

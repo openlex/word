@@ -1,5 +1,5 @@
 import React from "react";
-import { EProgress, PlayerAvatar } from "@components";
+import { EProgress, PlayerAvatar } from "@/components";
 import { mount, ReactWrapper } from "enzyme";
 
 describe("test action buttons", () => {

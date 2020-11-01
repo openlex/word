@@ -1,7 +1,7 @@
 import React from "react";
 import { mount, ReactWrapper } from "enzyme";
 import { Provider } from "react-redux";
-import { userSlice, EUserStatus, authOnlyHOC } from "@modules/User";
+import { userSlice, EUserStatus, authOnlyHOC } from "@/modules/User";
 import { configureStore } from "@reduxjs/toolkit";
 import { rootReducer } from "@/store";
 

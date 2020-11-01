@@ -1,9 +1,15 @@
 import React from "react";
-import { LoadingScreen } from "@components/LoadingScreen/LoadingScreen";
-import { render } from "enzyme";
+import { LoadingScreen, ProgressCircle } from "@/components";
+import { shallow, ShallowWrapper } from "enzyme";
 
 describe("loading screen", () => {
-	it("markup", () => {
-		expect(render(<LoadingScreen />)).toMatchSnapshot();
+	let loadingScreen: ShallowWrapper = {} as ShallowWrapper;
+
+	beforeEach(() => {
+		loadingScreen = shallow(<LoadingScreen />);
+	});
+
+	it("has progress circle", () => {
+		expect(loadingScreen.find(ProgressCircle).length).toBe(1);
 	});
 });

@@ -1,4 +1,4 @@
-// import { validateEmail } from "@utils";
+// import { validateEmail } from "@/utils";
 
 interface IRegistrationFormErrors {
 	email?: string;

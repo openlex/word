@@ -1,7 +1,7 @@
 import React from "react";
 import { ROUTES } from "@/ROUTES";
 import { Redirect } from "react-router-dom";
-import { LoadingScreen } from "@components";
+import { LoadingScreen } from "@/components";
 import { EUserStatus } from "../";
 import { RootReducerType } from "@/store";
 import { connect } from "react-redux";

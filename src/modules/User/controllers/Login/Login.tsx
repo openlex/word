@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useCallback } from "react";
 import { useHistory } from "react-router-dom";
-import { LoadingScreen } from "@components";
+import { LoadingScreen } from "@/components";
 import { connect } from "react-redux";
 import { ROUTES } from "@/ROUTES";
 import { userSlice, EUserStatus } from "@/modules/User";

@@ -1,9 +1,9 @@
 import * as React from "react";
-import { WordList } from "@modules/Words";
-import { PlayerAvatar } from "@components";
-import { colors } from "@styles";
+import { WordList } from "@/modules/Words";
+import { PlayerAvatar } from "@/components";
+import { colors } from "@/styles";
 import { DynamicModuleLoader } from "redux-dynamic-modules";
-import { getUserModule, authOnlyHOC } from "@modules/User";
+import { getUserModule, authOnlyHOC } from "@/modules/User";
 
 export const MakeWordPage = authOnlyHOC(() => {
 	return (

@@ -1,10 +1,10 @@
 import * as React from "react";
 import { Form, Formik } from "formik";
 import { css } from "@emotion/core";
-import { FieldInput } from "@components/ui/FieldInput/FieldInput";
+import { FieldInput } from "@/components/ui/FieldInput/FieldInput";
 import styled from "@emotion/styled";
-import { colors, mixinFlexCenter } from "@styles";
-import { Title } from "@components";
+import { colors, mixinFlexCenter } from "@/styles";
+import { Title } from "@/components";
 import { validateForm } from "./validateForm";
 import { FormikHelpers } from "formik/dist/types";
 

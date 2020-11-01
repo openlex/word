@@ -1,15 +1,13 @@
 import React from "react";
 import { mount } from "enzyme";
-import { UserPanelModule, User } from "@modules/User";
+import { UserPanelModule, User } from "@/modules/User";
+
+const mockHistoryPush = jest.fn();
 
 jest.mock("react-router-dom", () => ({
-	useHistory: function useHistory() {
-		return {
-			push: (url: string) => {
-				return url;
-			},
-		};
-	},
+	useHistory: () => ({
+		push: mockHistoryPush,
+	}),
 }));
 
 describe("UserPanel test", () => {
@@ -33,8 +31,8 @@ describe("UserPanel test", () => {
 
 		it("call logOut in user onClick", async (done) => {
 			await userComp.props().onClick();
-			jest.setTimeout(3200);
 			expect(logOutFn).toBeCalled();
+			expect(mockHistoryPush).toHaveBeenCalledWith("/signIn");
 			done();
 		}, 3000);
 	});

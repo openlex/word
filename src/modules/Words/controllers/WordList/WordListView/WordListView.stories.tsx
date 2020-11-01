@@ -1,7 +1,7 @@
 import React from "react";
 import { WordListView } from "./";
 import { object, withKnobs } from "@storybook/addon-knobs";
-import { IWord } from "@types";
+import { IWord } from "@/types";
 import { action } from "@storybook/addon-actions";
 
 export default {

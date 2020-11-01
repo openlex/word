@@ -1,6 +1,6 @@
 import React from "react";
 import { render, shallow, ShallowWrapper } from "enzyme";
-import { MainTitle } from "@components";
+import { MainTitle } from "@/components";
 
 describe("WordListItem markup", () => {
 	let title: ShallowWrapper = {} as ShallowWrapper;

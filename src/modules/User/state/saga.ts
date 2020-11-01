@@ -1,6 +1,6 @@
 import { AnyAction } from "redux";
 import { call, fork, put, takeEvery } from "redux-saga/effects";
-import { IUserResp, AuthApi } from "@api/Auth";
+import { IUserResp, AuthApi } from "@/api/Auth";
 import { userSlice } from "./";
 
 export function* saveUserSession(action: AnyAction) {
