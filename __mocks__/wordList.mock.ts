@@ -1,4 +1,4 @@
-import { IWordListResponseItem } from "@types";
+import { IWordListResponseItem } from "@/types";
 
 export const wordListMock = [
 	{

@@ -1,0 +1,1173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WordListView markup match snapshoot 1`] = `
+initialize {
+  "0": Object {
+    "attribs": Object {},
+    "children": Array [
+      Object {
+        "attribs": Object {
+          "data-test-id": "item",
+        },
+        "children": Array [
+          Object {
+            "attribs": Object {
+              "class": "css-py26lm-WordListItem",
+              "data-is-active": "false",
+              "data-test-id": "value",
+            },
+            "children": Array [
+              Object {
+                "data": "Text",
+                "next": null,
+                "parent": [Circular],
+                "prev": null,
+                "type": "text",
+              },
+            ],
+            "name": "span",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": null,
+            "parent": [Circular],
+            "prev": null,
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "class": undefined,
+              "data-is-active": undefined,
+              "data-test-id": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "class": undefined,
+              "data-is-active": undefined,
+              "data-test-id": undefined,
+            },
+          },
+        ],
+        "name": "li",
+        "namespace": "http://www.w3.org/1999/xhtml",
+        "next": Object {
+          "attribs": Object {
+            "data-test-id": "item",
+          },
+          "children": Array [
+            Object {
+              "attribs": Object {
+                "class": "css-py26lm-WordListItem",
+                "data-is-active": "false",
+                "data-test-id": "value",
+              },
+              "children": Array [
+                Object {
+                  "data": "Text2",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "text",
+                },
+              ],
+              "name": "span",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": Object {
+                "attribs": Object {
+                  "data-test-id": "isDifficult",
+                },
+                "children": Array [
+                  Object {
+                    "data": "*",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "text",
+                  },
+                ],
+                "name": "span",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": [Circular],
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "data-test-id": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "data-test-id": undefined,
+                },
+              },
+              "parent": [Circular],
+              "prev": null,
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "class": undefined,
+                "data-is-active": undefined,
+                "data-test-id": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "class": undefined,
+                "data-is-active": undefined,
+                "data-test-id": undefined,
+              },
+            },
+            Object {
+              "attribs": Object {
+                "data-test-id": "isDifficult",
+              },
+              "children": Array [
+                Object {
+                  "data": "*",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "text",
+                },
+              ],
+              "name": "span",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": null,
+              "parent": [Circular],
+              "prev": Object {
+                "attribs": Object {
+                  "class": "css-py26lm-WordListItem",
+                  "data-is-active": "false",
+                  "data-test-id": "value",
+                },
+                "children": Array [
+                  Object {
+                    "data": "Text2",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "text",
+                  },
+                ],
+                "name": "span",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": [Circular],
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "class": undefined,
+                  "data-is-active": undefined,
+                  "data-test-id": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "class": undefined,
+                  "data-is-active": undefined,
+                  "data-test-id": undefined,
+                },
+              },
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "data-test-id": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "data-test-id": undefined,
+              },
+            },
+          ],
+          "name": "li",
+          "namespace": "http://www.w3.org/1999/xhtml",
+          "next": Object {
+            "attribs": Object {
+              "data-test-id": "item",
+            },
+            "children": Array [
+              Object {
+                "attribs": Object {
+                  "class": "css-py26lm-WordListItem",
+                  "data-is-active": "false",
+                  "data-test-id": "value",
+                },
+                "children": Array [
+                  Object {
+                    "data": "Text3",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "text",
+                  },
+                ],
+                "name": "span",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "class": undefined,
+                  "data-is-active": undefined,
+                  "data-test-id": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "class": undefined,
+                  "data-is-active": undefined,
+                  "data-test-id": undefined,
+                },
+              },
+            ],
+            "name": "li",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": Object {
+              "attribs": Object {
+                "data-test-id": "item",
+              },
+              "children": Array [
+                Object {
+                  "attribs": Object {
+                    "class": "css-py26lm-WordListItem",
+                    "data-is-active": "false",
+                    "data-test-id": "value",
+                  },
+                  "children": Array [
+                    Object {
+                      "data": "Text4",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "text",
+                    },
+                  ],
+                  "name": "span",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "class": undefined,
+                    "data-is-active": undefined,
+                    "data-test-id": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "class": undefined,
+                    "data-is-active": undefined,
+                    "data-test-id": undefined,
+                  },
+                },
+              ],
+              "name": "li",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": null,
+              "parent": [Circular],
+              "prev": [Circular],
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "data-test-id": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "data-test-id": undefined,
+              },
+            },
+            "parent": [Circular],
+            "prev": [Circular],
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "data-test-id": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "data-test-id": undefined,
+            },
+          },
+          "parent": [Circular],
+          "prev": [Circular],
+          "type": "tag",
+          "x-attribsNamespace": Object {
+            "data-test-id": undefined,
+          },
+          "x-attribsPrefix": Object {
+            "data-test-id": undefined,
+          },
+        },
+        "parent": [Circular],
+        "prev": null,
+        "type": "tag",
+        "x-attribsNamespace": Object {
+          "data-test-id": undefined,
+        },
+        "x-attribsPrefix": Object {
+          "data-test-id": undefined,
+        },
+      },
+      Object {
+        "attribs": Object {
+          "data-test-id": "item",
+        },
+        "children": Array [
+          Object {
+            "attribs": Object {
+              "class": "css-py26lm-WordListItem",
+              "data-is-active": "false",
+              "data-test-id": "value",
+            },
+            "children": Array [
+              Object {
+                "data": "Text2",
+                "next": null,
+                "parent": [Circular],
+                "prev": null,
+                "type": "text",
+              },
+            ],
+            "name": "span",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": Object {
+              "attribs": Object {
+                "data-test-id": "isDifficult",
+              },
+              "children": Array [
+                Object {
+                  "data": "*",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "text",
+                },
+              ],
+              "name": "span",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": null,
+              "parent": [Circular],
+              "prev": [Circular],
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "data-test-id": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "data-test-id": undefined,
+              },
+            },
+            "parent": [Circular],
+            "prev": null,
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "class": undefined,
+              "data-is-active": undefined,
+              "data-test-id": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "class": undefined,
+              "data-is-active": undefined,
+              "data-test-id": undefined,
+            },
+          },
+          Object {
+            "attribs": Object {
+              "data-test-id": "isDifficult",
+            },
+            "children": Array [
+              Object {
+                "data": "*",
+                "next": null,
+                "parent": [Circular],
+                "prev": null,
+                "type": "text",
+              },
+            ],
+            "name": "span",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": null,
+            "parent": [Circular],
+            "prev": Object {
+              "attribs": Object {
+                "class": "css-py26lm-WordListItem",
+                "data-is-active": "false",
+                "data-test-id": "value",
+              },
+              "children": Array [
+                Object {
+                  "data": "Text2",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "text",
+                },
+              ],
+              "name": "span",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": [Circular],
+              "parent": [Circular],
+              "prev": null,
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "class": undefined,
+                "data-is-active": undefined,
+                "data-test-id": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "class": undefined,
+                "data-is-active": undefined,
+                "data-test-id": undefined,
+              },
+            },
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "data-test-id": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "data-test-id": undefined,
+            },
+          },
+        ],
+        "name": "li",
+        "namespace": "http://www.w3.org/1999/xhtml",
+        "next": Object {
+          "attribs": Object {
+            "data-test-id": "item",
+          },
+          "children": Array [
+            Object {
+              "attribs": Object {
+                "class": "css-py26lm-WordListItem",
+                "data-is-active": "false",
+                "data-test-id": "value",
+              },
+              "children": Array [
+                Object {
+                  "data": "Text3",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "text",
+                },
+              ],
+              "name": "span",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": null,
+              "parent": [Circular],
+              "prev": null,
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "class": undefined,
+                "data-is-active": undefined,
+                "data-test-id": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "class": undefined,
+                "data-is-active": undefined,
+                "data-test-id": undefined,
+              },
+            },
+          ],
+          "name": "li",
+          "namespace": "http://www.w3.org/1999/xhtml",
+          "next": Object {
+            "attribs": Object {
+              "data-test-id": "item",
+            },
+            "children": Array [
+              Object {
+                "attribs": Object {
+                  "class": "css-py26lm-WordListItem",
+                  "data-is-active": "false",
+                  "data-test-id": "value",
+                },
+                "children": Array [
+                  Object {
+                    "data": "Text4",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "text",
+                  },
+                ],
+                "name": "span",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "class": undefined,
+                  "data-is-active": undefined,
+                  "data-test-id": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "class": undefined,
+                  "data-is-active": undefined,
+                  "data-test-id": undefined,
+                },
+              },
+            ],
+            "name": "li",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": null,
+            "parent": [Circular],
+            "prev": [Circular],
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "data-test-id": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "data-test-id": undefined,
+            },
+          },
+          "parent": [Circular],
+          "prev": [Circular],
+          "type": "tag",
+          "x-attribsNamespace": Object {
+            "data-test-id": undefined,
+          },
+          "x-attribsPrefix": Object {
+            "data-test-id": undefined,
+          },
+        },
+        "parent": [Circular],
+        "prev": Object {
+          "attribs": Object {
+            "data-test-id": "item",
+          },
+          "children": Array [
+            Object {
+              "attribs": Object {
+                "class": "css-py26lm-WordListItem",
+                "data-is-active": "false",
+                "data-test-id": "value",
+              },
+              "children": Array [
+                Object {
+                  "data": "Text",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "text",
+                },
+              ],
+              "name": "span",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": null,
+              "parent": [Circular],
+              "prev": null,
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "class": undefined,
+                "data-is-active": undefined,
+                "data-test-id": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "class": undefined,
+                "data-is-active": undefined,
+                "data-test-id": undefined,
+              },
+            },
+          ],
+          "name": "li",
+          "namespace": "http://www.w3.org/1999/xhtml",
+          "next": [Circular],
+          "parent": [Circular],
+          "prev": null,
+          "type": "tag",
+          "x-attribsNamespace": Object {
+            "data-test-id": undefined,
+          },
+          "x-attribsPrefix": Object {
+            "data-test-id": undefined,
+          },
+        },
+        "type": "tag",
+        "x-attribsNamespace": Object {
+          "data-test-id": undefined,
+        },
+        "x-attribsPrefix": Object {
+          "data-test-id": undefined,
+        },
+      },
+      Object {
+        "attribs": Object {
+          "data-test-id": "item",
+        },
+        "children": Array [
+          Object {
+            "attribs": Object {
+              "class": "css-py26lm-WordListItem",
+              "data-is-active": "false",
+              "data-test-id": "value",
+            },
+            "children": Array [
+              Object {
+                "data": "Text3",
+                "next": null,
+                "parent": [Circular],
+                "prev": null,
+                "type": "text",
+              },
+            ],
+            "name": "span",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": null,
+            "parent": [Circular],
+            "prev": null,
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "class": undefined,
+              "data-is-active": undefined,
+              "data-test-id": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "class": undefined,
+              "data-is-active": undefined,
+              "data-test-id": undefined,
+            },
+          },
+        ],
+        "name": "li",
+        "namespace": "http://www.w3.org/1999/xhtml",
+        "next": Object {
+          "attribs": Object {
+            "data-test-id": "item",
+          },
+          "children": Array [
+            Object {
+              "attribs": Object {
+                "class": "css-py26lm-WordListItem",
+                "data-is-active": "false",
+                "data-test-id": "value",
+              },
+              "children": Array [
+                Object {
+                  "data": "Text4",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "text",
+                },
+              ],
+              "name": "span",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": null,
+              "parent": [Circular],
+              "prev": null,
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "class": undefined,
+                "data-is-active": undefined,
+                "data-test-id": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "class": undefined,
+                "data-is-active": undefined,
+                "data-test-id": undefined,
+              },
+            },
+          ],
+          "name": "li",
+          "namespace": "http://www.w3.org/1999/xhtml",
+          "next": null,
+          "parent": [Circular],
+          "prev": [Circular],
+          "type": "tag",
+          "x-attribsNamespace": Object {
+            "data-test-id": undefined,
+          },
+          "x-attribsPrefix": Object {
+            "data-test-id": undefined,
+          },
+        },
+        "parent": [Circular],
+        "prev": Object {
+          "attribs": Object {
+            "data-test-id": "item",
+          },
+          "children": Array [
+            Object {
+              "attribs": Object {
+                "class": "css-py26lm-WordListItem",
+                "data-is-active": "false",
+                "data-test-id": "value",
+              },
+              "children": Array [
+                Object {
+                  "data": "Text2",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "text",
+                },
+              ],
+              "name": "span",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": Object {
+                "attribs": Object {
+                  "data-test-id": "isDifficult",
+                },
+                "children": Array [
+                  Object {
+                    "data": "*",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "text",
+                  },
+                ],
+                "name": "span",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": [Circular],
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "data-test-id": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "data-test-id": undefined,
+                },
+              },
+              "parent": [Circular],
+              "prev": null,
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "class": undefined,
+                "data-is-active": undefined,
+                "data-test-id": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "class": undefined,
+                "data-is-active": undefined,
+                "data-test-id": undefined,
+              },
+            },
+            Object {
+              "attribs": Object {
+                "data-test-id": "isDifficult",
+              },
+              "children": Array [
+                Object {
+                  "data": "*",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "text",
+                },
+              ],
+              "name": "span",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": null,
+              "parent": [Circular],
+              "prev": Object {
+                "attribs": Object {
+                  "class": "css-py26lm-WordListItem",
+                  "data-is-active": "false",
+                  "data-test-id": "value",
+                },
+                "children": Array [
+                  Object {
+                    "data": "Text2",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "text",
+                  },
+                ],
+                "name": "span",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": [Circular],
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "class": undefined,
+                  "data-is-active": undefined,
+                  "data-test-id": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "class": undefined,
+                  "data-is-active": undefined,
+                  "data-test-id": undefined,
+                },
+              },
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "data-test-id": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "data-test-id": undefined,
+              },
+            },
+          ],
+          "name": "li",
+          "namespace": "http://www.w3.org/1999/xhtml",
+          "next": [Circular],
+          "parent": [Circular],
+          "prev": Object {
+            "attribs": Object {
+              "data-test-id": "item",
+            },
+            "children": Array [
+              Object {
+                "attribs": Object {
+                  "class": "css-py26lm-WordListItem",
+                  "data-is-active": "false",
+                  "data-test-id": "value",
+                },
+                "children": Array [
+                  Object {
+                    "data": "Text",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "text",
+                  },
+                ],
+                "name": "span",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "class": undefined,
+                  "data-is-active": undefined,
+                  "data-test-id": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "class": undefined,
+                  "data-is-active": undefined,
+                  "data-test-id": undefined,
+                },
+              },
+            ],
+            "name": "li",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": [Circular],
+            "parent": [Circular],
+            "prev": null,
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "data-test-id": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "data-test-id": undefined,
+            },
+          },
+          "type": "tag",
+          "x-attribsNamespace": Object {
+            "data-test-id": undefined,
+          },
+          "x-attribsPrefix": Object {
+            "data-test-id": undefined,
+          },
+        },
+        "type": "tag",
+        "x-attribsNamespace": Object {
+          "data-test-id": undefined,
+        },
+        "x-attribsPrefix": Object {
+          "data-test-id": undefined,
+        },
+      },
+      Object {
+        "attribs": Object {
+          "data-test-id": "item",
+        },
+        "children": Array [
+          Object {
+            "attribs": Object {
+              "class": "css-py26lm-WordListItem",
+              "data-is-active": "false",
+              "data-test-id": "value",
+            },
+            "children": Array [
+              Object {
+                "data": "Text4",
+                "next": null,
+                "parent": [Circular],
+                "prev": null,
+                "type": "text",
+              },
+            ],
+            "name": "span",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": null,
+            "parent": [Circular],
+            "prev": null,
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "class": undefined,
+              "data-is-active": undefined,
+              "data-test-id": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "class": undefined,
+              "data-is-active": undefined,
+              "data-test-id": undefined,
+            },
+          },
+        ],
+        "name": "li",
+        "namespace": "http://www.w3.org/1999/xhtml",
+        "next": null,
+        "parent": [Circular],
+        "prev": Object {
+          "attribs": Object {
+            "data-test-id": "item",
+          },
+          "children": Array [
+            Object {
+              "attribs": Object {
+                "class": "css-py26lm-WordListItem",
+                "data-is-active": "false",
+                "data-test-id": "value",
+              },
+              "children": Array [
+                Object {
+                  "data": "Text3",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "text",
+                },
+              ],
+              "name": "span",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": null,
+              "parent": [Circular],
+              "prev": null,
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "class": undefined,
+                "data-is-active": undefined,
+                "data-test-id": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "class": undefined,
+                "data-is-active": undefined,
+                "data-test-id": undefined,
+              },
+            },
+          ],
+          "name": "li",
+          "namespace": "http://www.w3.org/1999/xhtml",
+          "next": [Circular],
+          "parent": [Circular],
+          "prev": Object {
+            "attribs": Object {
+              "data-test-id": "item",
+            },
+            "children": Array [
+              Object {
+                "attribs": Object {
+                  "class": "css-py26lm-WordListItem",
+                  "data-is-active": "false",
+                  "data-test-id": "value",
+                },
+                "children": Array [
+                  Object {
+                    "data": "Text2",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "text",
+                  },
+                ],
+                "name": "span",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": Object {
+                  "attribs": Object {
+                    "data-test-id": "isDifficult",
+                  },
+                  "children": Array [
+                    Object {
+                      "data": "*",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "text",
+                    },
+                  ],
+                  "name": "span",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": [Circular],
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "data-test-id": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "data-test-id": undefined,
+                  },
+                },
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "class": undefined,
+                  "data-is-active": undefined,
+                  "data-test-id": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "class": undefined,
+                  "data-is-active": undefined,
+                  "data-test-id": undefined,
+                },
+              },
+              Object {
+                "attribs": Object {
+                  "data-test-id": "isDifficult",
+                },
+                "children": Array [
+                  Object {
+                    "data": "*",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "text",
+                  },
+                ],
+                "name": "span",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": Object {
+                  "attribs": Object {
+                    "class": "css-py26lm-WordListItem",
+                    "data-is-active": "false",
+                    "data-test-id": "value",
+                  },
+                  "children": Array [
+                    Object {
+                      "data": "Text2",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "text",
+                    },
+                  ],
+                  "name": "span",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": [Circular],
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "class": undefined,
+                    "data-is-active": undefined,
+                    "data-test-id": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "class": undefined,
+                    "data-is-active": undefined,
+                    "data-test-id": undefined,
+                  },
+                },
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "data-test-id": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "data-test-id": undefined,
+                },
+              },
+            ],
+            "name": "li",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": [Circular],
+            "parent": [Circular],
+            "prev": Object {
+              "attribs": Object {
+                "data-test-id": "item",
+              },
+              "children": Array [
+                Object {
+                  "attribs": Object {
+                    "class": "css-py26lm-WordListItem",
+                    "data-is-active": "false",
+                    "data-test-id": "value",
+                  },
+                  "children": Array [
+                    Object {
+                      "data": "Text",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "text",
+                    },
+                  ],
+                  "name": "span",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "class": undefined,
+                    "data-is-active": undefined,
+                    "data-test-id": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "class": undefined,
+                    "data-is-active": undefined,
+                    "data-test-id": undefined,
+                  },
+                },
+              ],
+              "name": "li",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": [Circular],
+              "parent": [Circular],
+              "prev": null,
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "data-test-id": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "data-test-id": undefined,
+              },
+            },
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "data-test-id": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "data-test-id": undefined,
+            },
+          },
+          "type": "tag",
+          "x-attribsNamespace": Object {
+            "data-test-id": undefined,
+          },
+          "x-attribsPrefix": Object {
+            "data-test-id": undefined,
+          },
+        },
+        "type": "tag",
+        "x-attribsNamespace": Object {
+          "data-test-id": undefined,
+        },
+        "x-attribsPrefix": Object {
+          "data-test-id": undefined,
+        },
+      },
+    ],
+    "name": "ul",
+    "namespace": "http://www.w3.org/1999/xhtml",
+    "next": null,
+    "parent": null,
+    "prev": null,
+    "root": Object {
+      "attribs": Object {},
+      "children": Array [
+        [Circular],
+      ],
+      "name": "root",
+      "namespace": "http://www.w3.org/1999/xhtml",
+      "next": null,
+      "parent": null,
+      "prev": null,
+      "type": "root",
+      "x-attribsNamespace": Object {},
+      "x-attribsPrefix": Object {},
+    },
+    "type": "tag",
+    "x-attribsNamespace": Object {},
+    "x-attribsPrefix": Object {},
+  },
+  "_root": [Circular],
+  "length": 1,
+  "options": Object {
+    "decodeEntities": true,
+    "normalizeWhitespace": false,
+    "withDomLvl1": true,
+    "xml": false,
+  },
+}
+`;

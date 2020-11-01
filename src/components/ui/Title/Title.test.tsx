@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { Title } from "@components";
+import { Title } from "@/components";
 
 describe("Title markup", () => {
 	it("match snapshoot", () => {

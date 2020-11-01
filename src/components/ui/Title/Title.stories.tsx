@@ -1,5 +1,5 @@
 import React from "react";
-import { Title } from "@components";
+import { Title } from "@/components";
 import { number, text, withKnobs } from "@storybook/addon-knobs";
 
 export default {

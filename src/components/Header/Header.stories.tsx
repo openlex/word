@@ -1,7 +1,9 @@
 import React from "react";
-import { Header } from "@components";
+import { Header } from "@/components";
 import { text, withKnobs } from "@storybook/addon-knobs";
-import { action } from "@storybook/addon-actions";
+import { Provider } from "react-redux";
+import { store } from "@/store";
+import { userSlice } from "@/modules";
 
 export default {
 	title: "Хэдер страницы",
@@ -9,21 +11,25 @@ export default {
 	decorators: [withKnobs],
 };
 
-export const defaultHeader = () => (
-	<Header
-		user={text("Имя пользователя", "Алексей 555")}
-		onLogOut={action("logOut")}
-	/>
+const HeaderComp = () => (
+	<Provider store={store}>
+		<Header />
+	</Provider>
 );
+
+export const defaultHeader = () => <HeaderComp />;
 
 defaultHeader.story = {
-	name: "Хэдер для авторизованного пользователя",
+	name: "Хэдер для неавторизованного пользователя",
 };
 
-export const headerLoggedOut = () => (
-	<Header user="" onLogOut={action("logOut")} />
-);
+export const headerLoggedOut = () => {
+	store.dispatch(
+		userSlice.actions.add({ name: text("Имя пользователя", "Эдуардро") })
+	);
+	return <HeaderComp />;
+};
 
 headerLoggedOut.story = {
-	name: "Хэдер для неавторизованного пользователя",
+	name: "Хэдер для авторизованного пользователя",
 };

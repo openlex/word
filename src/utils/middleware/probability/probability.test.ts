@@ -1,5 +1,5 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
-import { probabilityMiddleware } from "@utils";
+import { probabilityMiddleware } from "@/utils";
 
 describe("test probability", () => {
 	describe("test with store", () => {

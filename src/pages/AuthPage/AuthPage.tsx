@@ -1,6 +1,9 @@
 import * as React from "react";
-import { RegistrationFormContainer } from "@containers";
+import { Login, getUserModule } from "@/modules";
+import { DynamicModuleLoader } from "redux-dynamic-modules";
 
-export const AuthPage = () => {
-	return <RegistrationFormContainer />;
-};
+export const AuthPage = () => (
+	<DynamicModuleLoader modules={[getUserModule()]}>
+		<Login />
+	</DynamicModuleLoader>
+);
