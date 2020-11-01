@@ -1,5 +1,5 @@
 export interface IWord {
-	id: string;
+	// id: string;
 	value: string;
 	isDifficult?: boolean;
 	isActive?: boolean;

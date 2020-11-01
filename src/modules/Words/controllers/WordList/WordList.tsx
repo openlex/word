@@ -1,6 +1,6 @@
 import * as React from "react";
 import { WordListView } from "./WordListView/WordListView";
-import { IWord, IWordListResponseItem } from "@/types";
+import { IWord, IWordListResponseItem } from "@/modules";
 
 export interface IWordListContainerProps {
 	users?: string;
@@ -77,7 +77,7 @@ export class WordList extends React.Component<
 
 	onWordClick(id: string) {
 		const wordList = this.state.wordList.map((item) => {
-			if (item.id === id) {
+			if (item.value === id) {
 				item.isActive = !item.isActive;
 			}
 

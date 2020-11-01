@@ -2,7 +2,7 @@ import React from "react";
 import { shallow, ShallowWrapper } from "enzyme";
 import { WordList } from "./";
 import { wordListMock, wordListResponseMock } from "@mocks/wordList.mock";
-import { IWord } from "@/types";
+import { IWord } from "@/modules";
 
 describe("WordListItemContainer", () => {
 	let wordListItem: ShallowWrapper<{}, {}, WordList>;
@@ -72,26 +72,26 @@ describe("WordListItemContainer button enable status", () => {
 
 	it("after clicking first word", async () => {
 		// клик по первому элементу - кнопка должна быть неактивна
-		instance.onWordClick(mock[0].id);
+		instance.onWordClick(mock[0].value);
 		expect(wordListItem.state("isSendEnabled")).toEqual(false);
 	});
 
 	it("clicking two words", async () => {
 		// клик по второму элементу - кнопка должна стать активной
-		instance.onWordClick(mock[1].id);
+		instance.onWordClick(mock[1].value);
 		expect(wordListItem.state("isSendEnabled")).toEqual(true);
 	});
 
 	it("clicking three words", async () => {
 		// клик по третьему элементу - кнопка должна быть активной
-		instance.onWordClick(mock[2].id);
+		instance.onWordClick(mock[2].value);
 		expect(wordListItem.state("isSendEnabled")).toEqual(true);
 	});
 
 	it("clicking back last two words", async () => {
 		// клик по третьему элементу - кнопка должна стать НЕактивной
-		instance.onWordClick(mock[1].id);
-		instance.onWordClick(mock[2].id);
+		instance.onWordClick(mock[1].value);
+		instance.onWordClick(mock[2].value);
 
 		expect(wordListItem.state("isSendEnabled")).toEqual(false);
 	});
@@ -101,7 +101,7 @@ describe("WordListItemContainer button enable status", () => {
 			wordList: mock,
 		});
 
-		instance.onWordClick(mock[3].id);
+		instance.onWordClick(mock[3].value);
 		const wordListState: IWord[] = wordListItem.state("wordList");
 		expect(wordListState[3].isActive).toEqual(true);
 	});
